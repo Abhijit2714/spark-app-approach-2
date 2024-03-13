@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spark-app
+  name: apache-spark-app
   annotations:
     keel.sh/policy: "automated"
     keel.sh/trigger: "webhook"
@@ -9,15 +9,15 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      app: spark-app
+      app: apache-spark-app
   template:
     metadata:
       labels:
-        app: spark-app
+        app: apache-spark-app
     spec:
       terminationGracePeriodSeconds: 30
       containers:
-      - name: spark-app
+      - name: apache-spark-app
         image: abhijitdhamne/spark-app:2cf5bac 
         imagePullPolicy: "Always"
         ports:
