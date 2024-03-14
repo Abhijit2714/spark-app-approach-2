@@ -35,7 +35,7 @@ jobs:
       run: |
           COMMIT_ID=$(git rev-parse --short HEAD)
           DEPLOYMENT_FILE="argocd/deployment.yaml"
-          sed -i "s|image: abhijitdhamne/spark-pi:[^ ]*|image: abhijitdhamne/spark-pi:${COMMIT_ID}|g" ${DEPLOYMENT_FILE}
+          sed -i "s|image: abhijitdhamne/spark-app:[^ ]*|image: abhijitdhamne/spark-app:${COMMIT_ID}|g" ${DEPLOYMENT_FILE}
           echo "Updated deployment.yaml with the latest commit ID: ${COMMIT_ID}"
     - name: Debug - Show content of deployment.yaml after update
       run: cat argocd/deployment.yaml
