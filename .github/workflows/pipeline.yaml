@@ -40,8 +40,7 @@ jobs:
     - name: Debug - Show content of deployment.yaml after update
       run: cat argocd/deployment.yaml
     - name: Commit changes to deployment file
-      #env:
-       # PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
+      
       run: |
           git config --global user.name "Abhijit2714"
           git config --global user.email "abijitdhamne@gmail.com"
