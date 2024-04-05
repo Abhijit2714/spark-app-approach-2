@@ -18,7 +18,7 @@ spec:
       terminationGracePeriodSeconds: 30
       containers:
       - name: apache-spark-app
-        image: abhijitdhamne/spark-app:2d98e08 
+        image: abhijitdhamne/spark-app:c473e37 
         imagePullPolicy: "Always"
         ports:
         - containerPort: 4040
